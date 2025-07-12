@@ -17,6 +17,7 @@
                  class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg"
                  v-for="answer,key in questions[0]['answers'] "
                  :class="{'hover:bg-gray-100 cursor-pointer' :selectedAnswer == ''}"
+                  
                  >
                     <input type="radio"
                      :id="key"
@@ -27,7 +28,14 @@
                        />
                      {{answer}}
                  </label>
-                 
+                 <div class="mt-6 flow-root">
+                    <button class="float-right px-5 py-2 bg-indigo-600 text-white text-sm tracking-wide rounded-full"
+                     v-show="selectedAnswer !=''"
+                    
+                    >
+                    Next &gt;
+                </button>
+                 </div>
             </div>
             </div>
             
