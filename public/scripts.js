@@ -1,7 +1,8 @@
 const app = Vue.createApp({
   data(){
     return{
-      selectedAnswer:'',
+      index: 0,
+      selectedAnswer: '',
         questions:[
             {
              question:"Rolex is a company that specializes in what type of product?",
@@ -26,6 +27,7 @@ const app = Vue.createApp({
     answered(e){
       this.selectedAnswer = e.target.value
       console.log(this.selectedAnswer)
+      console.log('test')
     }
   }
 })
